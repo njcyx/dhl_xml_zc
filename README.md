@@ -11,4 +11,4 @@ https://xmlportal.dhl.com/login
 Special thanks to upsoauth plug-in from @lat9 and fedexwebservices plug-in from @Numinix. 
 
 Known bugs:
-For New Zealand, the DHL quote doesn't show up in the estimate shipping page in the shopping cart. But during the checkout page, DHL quote is displayed properly. 
+For some New Zealand address(?), the DHL quote doesn't show up in the estimate shipping page in the shopping cart. But during the checkout page, DHL quote is displayed properly. 
