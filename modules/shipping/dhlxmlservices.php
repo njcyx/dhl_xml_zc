@@ -152,6 +152,7 @@ if ($this->enabled && IS_ADMIN_FLAG) {
       foreach($db_allowed_metods as $db_method){
           $allowed_methods[] = substr($db_method, 0,1);
       } */
+      if (is_iterable($bkgdetails->QtdShp)) {
       foreach($bkgdetails->QtdShp as $detailed){
           if ((int)$detailed->ShippingCharge != 0 && (string)$detailed->GlobalProductCode == "D"){
               $title = ucwords(strtolower((string)$detailed->LocalProductName));
@@ -161,6 +162,7 @@ if ($this->enabled && IS_ADMIN_FLAG) {
                            'title' => $title,
                            'cost' => ((string)$new_cost) + (MODULE_SHIPPING_DHL_HANDLING_METHOD == 'Box' ? MODULE_SHIPPING_DHL_HANDLING * $shipping_num_boxes : MODULE_SHIPPING_DHL_HANDLING) );     
           }
+      }
       }
       
     if ( (is_array($methods)) && (sizeof($methods) > 0) ) {
