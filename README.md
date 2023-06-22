@@ -1,5 +1,5 @@
 # dhl_xml_zc
-DHL XML Shipping for Zen-Cart
+DHL XML Shipping for Zen-Cart. v2.0.0
 
 Code is based on DHL Shipping plug-in, v1.1.0. Author: bislewl
 https://www.zen-cart.com/downloads.php?do=file&id=1910
