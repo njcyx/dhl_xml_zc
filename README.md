@@ -2,7 +2,7 @@
 Code is based on DHL Shipping plug-in, v1.1.0. Author: bislewl
 https://www.zen-cart.com/downloads.php?do=file&id=1910
 
-Code tested in zc 1.5.7d & php 7.4. Ship from US. 
+Code tested in zc 1.5.7d & php 7.4.
 
 DHL XML Api account is needed. To create an account, see below: 
 
