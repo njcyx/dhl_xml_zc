@@ -309,6 +309,8 @@ if ($this->enabled && IS_ADMIN_FLAG) {
       global $shipping_num_boxes,$shipping_weight;
     $this->_dhlXMLPiecesElement =            '<Pieces>';
     $box_counted = 0;
+    $shipping_weight = round($shipping_weight,2);
+      
         while($box_counted != $shipping_num_boxes){
             $box_counted++;
             $this->_dhlXMLPiecesElement .=                '<Piece>';
