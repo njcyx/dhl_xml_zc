@@ -136,6 +136,12 @@ if ($this->enabled && IS_ADMIN_FLAG) {
     $this->_dhlFromElement(MODULE_SHIPPING_DHL_FROM_CNTRY, MODULE_SHIPPING_DHL_FROM_CITY, MODULE_SHIPPING_DHL_FROM_POSTAL);
     $this->_dhlToElement($order->delivery['country']['iso_code_2'], $order->delivery['city'], $order->delivery['postcode']);
     $this->_dhlRequestElement();
+
+    //exclude US from shipping country.
+ /*   if ($order->delivery['country']['iso_code_2'] == "US") {
+        $this->quotes = [];
+        return $this->quotes;
+    } */
     
     $dhlQuote = $this->_dhlGetQuote();
 
