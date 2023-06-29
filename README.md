@@ -11,5 +11,5 @@ https://xmlportal.dhl.com/login
 Special thanks to upsoauth plug-in from @lat9 and fedexwebservices plug-in from @Numinix. 
 
 Notes: 
-1) This plug-in doesn't have an option to exclude the country from the shipping quote. To exclude countries, please edit around line 140.
+1) This plug-in doesn't have an option to exclude the country from the shipping quote. To exclude countries, please edit modules/shipping/dhlxmlservices.php around line 140.
 2) For some countries (like Ireland), the estimated shipping quote page in the shopping cart doesn't show the DHL quote. But during the checkout page, you will see the DHL shipping quote properly. It seems that DHL needs the "city" value to get a quote for some countries. 
