@@ -166,7 +166,7 @@ if ($this->enabled && IS_ADMIN_FLAG) {
               $title = trim(str_replace('Doc', "", $title));
               $methods[] = array('id' => (string)$detailed->GlobalProductCode,
                            'title' => $title,
-                           'cost' => ((string)$detailed->ShippingCharge) + (MODULE_SHIPPING_DHL_HANDLING_METHOD == 'Box' ? MODULE_SHIPPING_DHL_HANDLING * $shipping_num_boxes : MODULE_SHIPPING_DHL_HANDLING) );     
+                           'cost' => round($detailed->ShippingCharge, 2) + (MODULE_SHIPPING_DHL_HANDLING_METHOD == 'Box' ? MODULE_SHIPPING_DHL_HANDLING * $shipping_num_boxes : MODULE_SHIPPING_DHL_HANDLING) );     
           }
       }
       }
