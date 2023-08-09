@@ -1,4 +1,7 @@
 # DHL XML Shipping for Zen-Cart. v2.0.0
+
+8/9/2023 update: bug fixes
+
 Code is based on DHL Shipping plug-in, v1.1.0. Author: bislewl
 https://www.zen-cart.com/downloads.php?do=file&id=1910
 
