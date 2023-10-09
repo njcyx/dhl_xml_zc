@@ -22,50 +22,22 @@ class dhlxmlservices extends base {
     //
     const ZEN_CART_PLUGIN_ID = 1910;
     
-    protected
-        $moduleVersion = '2.0.0';
+public
+    $code, 
+    $title,
+    $description,
+    $icon,
+    $enabled,
+    $tax_class,
+    $tax_basis,
+    $sort_order,
+    $types,
+    $quotes;
 
-  /**
-   * Declare shipping module alias code
-   *
-   * @var string
-   */
-  var $code;
-  /**
-   * Shipping module display name
-   *
-   * @var string
-   */
-  var $title;
-  /**
-   * Shipping module display description
-   *
-   * @var string
-   */
-  var $description;
-  /**
-   * Shipping module icon filename/path
-   *
-   * @var string
-   */
-  var $icon;
-  /**
-   * Shipping module status
-   *
-   * @var boolean
-   */
-  var $enabled;
-  /**
-   * Shipping module list of supported countries (unique to USPS/DHL)
-   *
-   * @var array
-   */
-  var $types;
-  /**
-   * Constructor
-   *
-   * @return dhl
-   */
+protected
+    $_check,
+    $moduleVersion = '2.0.0';
+
  // function dhlxmlservices() {
     public function __construct() {
     global $order, $db, $template, $current_page_base;
@@ -147,8 +119,8 @@ if ($this->enabled && IS_ADMIN_FLAG) {
 
     if(MODULE_SHIPPING_DHL_DEBUG == 'true' ){
       $log_time_stamp = microtime();
-      error_log('['. strftime("%Y-%m-%d %H:%M:%S") .'] '. var_export($this, true), 3, DIR_FS_LOGS . '/dhl-requests-' . $log_time_stamp . '.log');
-      error_log('['. strftime("%Y-%m-%d %H:%M:%S") .'] '. var_export($dhlQuote, true), 3, DIR_FS_LOGS . '/dhl-responses-' . $log_time_stamp . '.log');
+      error_log('['. date('Ymd-His') .'] '. var_export($this, true), 3, DIR_FS_LOGS . '/dhl-requests-' . $log_time_stamp . '.log');
+      error_log('['. date('Ymd-His') .'] '. var_export($dhlQuote, true), 3, DIR_FS_LOGS . '/dhl-responses-' . $log_time_stamp . '.log');
     }
 
     $bkgdetails = $dhlQuote->GetQuoteResponse->BkgDetails;
